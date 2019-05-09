@@ -355,19 +355,61 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="jobTitle1">Job Title :</label>
+                                                    <label for="jobTitle1">Nama :</label>
                                                     <input type="text" class="form-control" id="jobTitle1"> </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="videoUrl1">Company Name :</label>
+                                                    <label for="videoUrl1">NIK :</label>
                                                     <input type="text" class="form-control" id="videoUrl1">
                                                 </div>
                                             </div>
-                                            <div class="col-md-12">
+                                            <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="shortDescription1">Job Description :</label>
-                                                    <textarea name="shortDescription" id="shortDescription1" rows="6" class="form-control"></textarea>
+                                                    <label for="videoUrl1">NIK Ayah :</label>
+                                                    <input type="text" class="form-control" id="videoUrl1">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="videoUrl1">NIK Ibu :</label>
+                                                    <input type="text" class="form-control" id="videoUrl1">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="videoUrl1">Jenis Kelamin :</label>
+                                                    <input type="text" class="form-control" id="videoUrl1">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="videoUrl1">Tempat Lahir :</label>
+                                                    <input type="text" class="form-control" id="videoUrl1">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="videoUrl1">Tanggal Lahir :</label>
+                                                    <input type="text" class="form-control" id="videoUrl1">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="videoUrl1">Agama :</label>
+                                                    <input type="text" class="form-control" id="videoUrl1">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="videoUrl1">Pekerjaan :</label>
+                                                    <input type="text" class="form-control" id="videoUrl1">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="videoUrl1">Pendidikan :</label>
+                                                    <input type="text" class="form-control" id="videoUrl1">
                                                 </div>
                                             </div>
                                         </div>
