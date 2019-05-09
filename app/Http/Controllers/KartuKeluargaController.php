@@ -112,6 +112,7 @@ class KartuKeluargaController extends Controller
         $kk->update($request->all());
         $penduduks = array();
         foreach($request->nama as $key => $nama){
+            $kepala_keluarga = (!$key)? 1 : 0;
             $data = array(
                 "nama" => $nama,
                 "no_kitas" => $request->no_kitas[$key],
@@ -132,7 +133,7 @@ class KartuKeluargaController extends Controller
                 $penduduk->update($data);
             } else {
                 $penduduk = Penduduk::create($data);
-                
+
                 $data = array(
                     "kartu_keluarga_id" => $kk->id,
                     "penduduk_id" => $penduduk->id,

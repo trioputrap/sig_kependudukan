@@ -280,7 +280,7 @@
                                                 <td>{{$val->no_kk}}</td>
                                                 <td>{{$val->alamat}}</td>
                                                 <td>{{$val->kepala_keluarga->penduduk->nama}}</td>
-                                                <td><a class="btn btn-success" href="{{ route('kk.edit', $val->id) }}">edit</a></td>
+                                                <td><a class="btn btn-success" href="https://{{ route('kk.edit', $val->id) }}">edit</a></td>
                                             </tr>
                                             @endforeach
                                         </tbody>
