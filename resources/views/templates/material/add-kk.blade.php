@@ -643,7 +643,7 @@
     <script>
         function ajax_daerah(daerah, id, select_element, master){
             $.ajax({
-                url: "http://127.0.0.1:8000/api/"+ id +"/"+ daerah,
+                url: "http://sigpenduk.herokuapp.com/api/"+ id +"/"+ daerah,
                 type: "GET",
                 crossDomain: true,
                 dataType: "json",                
