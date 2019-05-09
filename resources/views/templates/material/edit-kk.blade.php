@@ -476,7 +476,7 @@
                                                 @continue
                                             @endif
                                             <br>
-                                            <input value="{{$kk->anggota[0]->id}}" name="id_anggota[]" type="hidden" class="id_anggota form-control" id="id_anggota"> 
+                                            <input value="{{$anggota->id}}" name="id_anggota[]" type="hidden" class="id_anggota form-control" id="id_anggota"> 
                                             <h4>Anggota Keluarga {{$key+1}}</h4>
                                             <button type="button" class="btn btn-danger">Hapus Anggota</button>
                                             <hr>

@@ -45,7 +45,7 @@ $(".validation-wizard").steps({
             data: formData,
             success: function (response) {
                 console.log(response);
-                alert('pause');
+                //alert('pause');
                 swal("Kartu Keluarga Tersimpan!", "Kartu Keluarga berhasil disimpan");
                 $("#id").val(response[0].id);
                 $(".id_anggota").each(function(index){
