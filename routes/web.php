@@ -17,3 +17,4 @@ Route::get('/', function () {
 Route::get('/kk', 'KartuKeluargaController@index');
 Route::get('/kk/create', 'KartuKeluargaController@create');
 Route::post('/kk/store', 'KartuKeluargaController@store')->name('kk.store');
+Route::get('/penduduk', 'PendudukController@index');

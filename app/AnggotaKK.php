@@ -22,4 +22,9 @@ class AnggotaKK extends Model
     {
         return $this->hasOne('App\Penduduk', 'id', 'penduduk_id');
     }
+
+    public function kk()
+    {
+        return $this->belongsTo('App\KartuKeluarga');
+    }
 }

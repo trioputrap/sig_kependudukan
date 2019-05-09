@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Penduduk;
 use Illuminate\Http\Request;
 
 class PendudukController extends Controller
@@ -13,7 +14,8 @@ class PendudukController extends Controller
      */
     public function index()
     {
-        //
+        $penduduks = Penduduk::all();
+        return view('templates.material.penduduk-view', compact('penduduks', $penduduks));
     }
 
     /**

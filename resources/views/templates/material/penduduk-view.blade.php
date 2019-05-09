@@ -243,10 +243,10 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 col-8 align-self-center">
-                        <h3 class="text-themecolor m-b-0 m-t-0">Kartu Keluarga</h3>
+                        <h3 class="text-themecolor m-b-0 m-t-0">Penduduk</h3>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                            <li class="breadcrumb-item active">Lihat Kartu Keluarga</li>
+                            <li class="breadcrumb-item active">Lihat Penduduk</li>
                         </ol>
                     </div>
                    
@@ -268,17 +268,19 @@
                                             <tr>
                                                 <th>#</th>
                                                 <th>No KK</th>
-                                                <th>Alamat</th>
-                                                <th>Kepala Keluarga</th>
+                                                <th>NIK</th>
+                                                <th>Nama</th>
+                                                <th>Jenis Kelamin</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @foreach($kk as $key => $val)
+                                            @foreach($penduduks as $key => $penduduk)
                                             <tr>
                                                 <td>{{$key+1}}</td>
-                                                <td>{{$val->no_kk}}</td>
-                                                <td>{{$val->alamat}}</td>
-                                                <td>{{$val->kepala_keluarga->penduduk->nama}}</td>
+                                                <td>{{$penduduk->anggota_aktif->kk->no_kk}}</td>
+                                                <td>{{$penduduk->nik}}</td>
+                                                <td>{{$penduduk->nama}}</td>
+                                                <td>{{$penduduk->jenis_kelamin}}</td>
                                             </tr>
                                             @endforeach
                                         </tbody>

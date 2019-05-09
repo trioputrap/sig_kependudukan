@@ -25,9 +25,9 @@ class Penduduk extends Model
         'status_id',
     ];
 
-    public function kk()
+    public function anggota_aktif()
     {
-        return $this->belongsTo('App\KartuKeluarga');
+        return $this->hasOne('App\AnggotaKK', 'penduduk_id', 'id')->where('status', 'aktif');
     }
 
     public function status()
