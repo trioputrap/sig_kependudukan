@@ -312,7 +312,6 @@
                                                     <select name="kecamatan_id" id="slc_kec" class="form-control custom-select" required disabled>
                                                         <option value="">-PILIH KABUPATEN TERLEBIH DAHULU-</option>
                                                     </select>
-                                                    
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
@@ -396,20 +395,59 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label for="videoUrl1">Agama :</label>
-                                                    <input type="text" class="form-control" id="videoUrl1">
+                                                    <label for="videoUrl1">Agama :</label> 
+                                                    <select name="agama" id="agama" class="form-control custom-select" required>
+                                                        <option value="">-PILIH AGAMA-</option>
+                                                        <option value="hindu">Hindu</option>
+                                                        <option value="islam">Islam</option>
+                                                        <option value="protestan">Protestan</option>
+                                                        <option value="kong hu cu">Kong Hu Cu</option>
+                                                        <option value="katolik">Katolik</option>
+                                                        <option value="budha">Budha</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="videoUrl1">Pekerjaan :</label>
-                                                    <input type="text" class="form-control" id="videoUrl1">
+                                                    <select name="pekerjaan" id="pekerjaan" class="form-control custom-select" required>
+                                                        <option value="">-PILIH PEKERJAAN-</option>
+                                                        <option value="Belum/Tidak Bekerja">Belum/Tidak Bekerja</option>
+                                                        <option value="Pelajar/Mahasiswa">Pelajar/Mahasiswa</option>
+                                                        <option value="Pensiunan">Pensiunan</option>
+                                                        <option value="Pegawai Negeri Sipil">Pegawai Negeri Sipil</option>
+                                                        <option value="Tentara Nasional Indonesia">Tentara Nasional Indonesia</option>
+                                                        <option value="Kepolisian RI">Kepolisian RI</option>
+                                                        <option value="Perdagangan">Perdagangan</option>
+                                                        <option value="Petani/Pekebun">Petani/Pekebun</option>
+                                                        <option value="Peternak">Peternak</option>
+                                                        <option value="Nelayan/Perikanan">Nelayan/Perikanan</option>
+                                                        <option value="Industri">Industri</option>
+                                                        <option value="Konstruksi">Konstruksi</option>
+                                                        <option value="Transportasi">Transportasi</option>
+                                                        <option value="Karyawan Swasta">Karyawan Swasta</option>
+                                                        <option value="Karyawan BUMN">Karyawan BUMN</option>
+                                                        <option value="Karyawan BUMD">Karyawan BUMD</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label for="videoUrl1">Pendidikan :</label>
-                                                    <input type="text" class="form-control" id="videoUrl1">
+                                                    <select name="pekerjaan" id="pekerjaan" class="form-control custom-select" required>
+                                                        <option value="">-PILIH PENDIDIKAN-</option>
+                                                        <option value="Tidak/Belum Sekolah">Tidak/Belum Sekolah</option>
+                                                        <option value="Tidak Tamat SD/Sederajat">Tidak Tamat SD/Sederajat</option>
+                                                        <option value="Tamat SD/Sederajat">Tamat SD/Sederajat</option>
+                                                        <option value="SLTP/Sederajat">SLTP/Sederajat</option>
+                                                        <option value="SLTA/Sederjat">SLTA/Sederjat</option>
+                                                        <option value="Transportasi">Transportasi</option>
+                                                        <option value="Diploma I/II">Diploma I/II</option>
+                                                        <option value="Akademi/Diploma III/S. Muda">Akademi/Diploma III/S. Muda</option>
+                                                        <option value="DilpomaIV/Strata I">DilpomaIV/Strata I</option>
+                                                        <option value="Strata II">Strata II</option>
+                                                        <option value="Strata III">Strata III</option>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </div>
