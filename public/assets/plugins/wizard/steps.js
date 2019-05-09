@@ -50,6 +50,7 @@ $(".validation-wizard").steps({
                 $(".id_anggota").each(function(index){
                     $(this).val(response[1][index].id)
                 });
+                window.location.href = "https://sigpenduk.herokuapp.com/kk";
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 console.log(xhr.status);
