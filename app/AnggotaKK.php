@@ -25,6 +25,6 @@ class AnggotaKK extends Model
 
     public function kk()
     {
-        return $this->belongsTo('App\KartuKeluarga');
+        return $this->belongsTo('App\KartuKeluarga', 'kartu_keluarga_id', 'id');
     }
 }
