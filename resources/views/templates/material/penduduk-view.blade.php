@@ -278,7 +278,7 @@
                                             <tr>
                                                 <td>{{$key+1}}</td>
                                                 <td>{{$penduduk->anggota_aktif->kk->no_kk}}</td>
-                                                <td>{{$penduduk->nik}}</td>
+                                                <td>{{$penduduk->NIK}}</td>
                                                 <td>{{$penduduk->nama}}</td>
                                                 <td>{{$penduduk->jenis_kelamin}}</td>
                                             </tr>
