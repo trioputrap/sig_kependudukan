@@ -30,9 +30,9 @@ $(".validation-wizard").steps({
     }
     , onFinished: function (event, currentIndex) {
         var id = $("#id").val();
-        var url = "www.sigpenduk.herokuapp.com/api/kk/store";
+        var url = "https://sigpenduk.herokuapp.com/api/kk/store";
         if (id != "") {
-            url = "www.sigpenduk.herokuapp.com/api/kk/update/"+id;
+            url = "https://sigpenduk.herokuapp.com/api/kk/update/"+id;
         }
         var formData = new FormData($("#form_kk")[0]);
         $.ajax({
