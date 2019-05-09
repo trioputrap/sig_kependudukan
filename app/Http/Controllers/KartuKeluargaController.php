@@ -128,7 +128,11 @@ class KartuKeluargaController extends Controller
                 "status_id" => 1
             );
             $penduduk = Penduduk::find($request->id_anggota[$key]);
-            $penduduk->update($data);
+            if($penduduk){
+                $penduduk->update($data);
+            } else {
+                $penduduk = Penduduk::create($data);
+            }
             $penduduks[] = $penduduk;
         }
         return array($kk, $penduduks);
