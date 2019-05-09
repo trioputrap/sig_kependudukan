@@ -132,6 +132,15 @@ class KartuKeluargaController extends Controller
                 $penduduk->update($data);
             } else {
                 $penduduk = Penduduk::create($data);
+                
+                $data = array(
+                    "kartu_keluarga_id" => $kk->id,
+                    "penduduk_id" => $penduduk->id,
+                    "tgl_masuk" => date("Y-m-d"),
+                    "status" => 'aktif',
+                    "kepala_keluarga" => $kepala_keluarga,
+                );
+                $anggotaKk = AnggotaKK::create($data);
             }
             $penduduks[] = $penduduk;
         }
