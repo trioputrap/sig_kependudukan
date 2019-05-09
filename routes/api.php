@@ -19,3 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/{prov_id}/kabupaten', 'DaerahController@kabupaten');
 Route::get('/{kab_id}/kecamatan', 'DaerahController@kecamatan');
 Route::get('/{kec_id}/desa', 'DaerahController@desa');
+Route::post('/kk/store', 'KartuKeluargaController@store')->name('api.kk.store');
+Route::post('/kk/update/{kk}', 'KartuKeluargaController@update')->name('api.kk.update');

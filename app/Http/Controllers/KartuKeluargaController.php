@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\KartuKeluarga;
 use App\Daerah;
+use App\Penduduk;
+use App\AnggotaKK;
 use Illuminate\Http\Request;
 
 class KartuKeluargaController extends Controller
@@ -15,7 +17,7 @@ class KartuKeluargaController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -38,7 +40,38 @@ class KartuKeluargaController extends Controller
     public function store(Request $request)
     {
         $kk = KartuKeluarga::create($request->all());
-        return $kk;
+        $penduduks = array();
+        foreach($request->nama as $key => $nama){
+            $kepala_keluarga = (!$key)? 1 : 0;
+            $data = array(
+                "nama" => $nama,
+                "no_kitas" => $request->no_kitas[$key],
+                "no_paspor" => $request->no_paspor[$key],
+                "nik" => $request->nik[$key],
+                "nik_ayah" => $request->nik_ayah[$key],
+                "nik_ibu" => $request->nik_ibu[$key],
+                "jenis_kelamin" => $request->jenis_kelamin[$key],
+                "tempat_lahir" => $request->tempat_lahir[$key],
+                "agama" => $request->agama[$key],
+                "pekerjaan" => $request->pekerjaan[$key],
+                "pendidikan" => $request->pendidikan[$key],
+                "status_id" => 1
+            );
+            $penduduk = Penduduk::create($data);
+
+            $data = array(
+                "kartu_keluarga_id" => $kk->id,
+                "penduduk_id" => $penduduk->id,
+                "tgl_masuk" => date("Y-m-d"),
+                "status" => 'aktif',
+                "kepala_keluarga" => $kepala_keluarga,
+            );
+            $anggotaKk = AnggotaKK::create($data);
+
+            $penduduks[] = $penduduk;
+        }
+
+        return array($kk, $penduduks);
     }
 
     /**
@@ -70,9 +103,30 @@ class KartuKeluargaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, KartuKeluarga $kk)
     {
-        //
+        $kk->update($request->all());
+        $penduduks = array();
+        foreach($request->nama as $key => $nama){
+            $data = array(
+                "nama" => $nama,
+                "no_kitas" => $request->no_kitas[$key],
+                "no_paspor" => $request->no_paspor[$key],
+                "nik" => $request->nik[$key],
+                "nik_ayah" => $request->nik_ayah[$key],
+                "nik_ibu" => $request->nik_ibu[$key],
+                "jenis_kelamin" => $request->jenis_kelamin[$key],
+                "tempat_lahir" => $request->tempat_lahir[$key],
+                "agama" => $request->agama[$key],
+                "pekerjaan" => $request->pekerjaan[$key],
+                "pendidikan" => $request->pendidikan[$key],
+                "status_id" => 1
+            );
+            $penduduk = Penduduk::find($request->id_anggota[$key]);
+            $penduduk->update($data);
+            $penduduks[] = $penduduk;
+        }
+        return array($kk, $penduduks);
     }
 
     /**

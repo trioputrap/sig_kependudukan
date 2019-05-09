@@ -11,16 +11,17 @@ class Penduduk extends Model
 
     protected $fillable = [
         'nama', 
+        'no_kitas',
+        'no_paspor',
         'nik',
+        'nik_ayah',
+        'nik_ibu',
         'jenis_kelamin',
         'tempat_lahir',
         'tanggal_lahir',
         'agama',
-        'kartu_keluarga_id',
         'pekerjaan',
         'pendidikan',
-        'no_kitas',
-        'no_paspor',
         'status_id',
     ];
 

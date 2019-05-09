@@ -8,7 +8,6 @@ $(".tab-wizard").steps({
     }
     , onFinished: function (event, currentIndex) {
        swal("Form Submitted!", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem erat eleifend ex semper, lobortis purus sed.");
-            
     }
 });
 
@@ -30,7 +29,35 @@ $(".validation-wizard").steps({
         return form.validate().settings.ignore = ":disabled", form.valid()
     }
     , onFinished: function (event, currentIndex) {
-         swal("Form Submitted!", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem erat eleifend ex semper, lobortis purus sed.");
+        var id = $("#id").val();
+        var url = "http://127.0.0.1:8000/api/kk/store";
+        if (id != "") {
+            url = "http://127.0.0.1:8000/api/kk/update/"+id;
+        }
+        var formData = new FormData($("#form_kk")[0]);
+        $.ajax({
+            url: url,
+            type: "POST",
+            crossDomain: true,
+            dataType: "json",                
+            processData: false,
+            contentType: false,
+            data: formData,
+            success: function (response) {
+                console.log(response);
+                swal("Kartu Keluarga Tersimpan!", "Kartu Keluarga berhasil disimpan");
+                $("#id").val(response[0].id);
+                $(".id_anggota").each(function(index){
+                    $(this).val(response[1][index].id)
+                });
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                console.log(xhr.status);
+                console.log(thrownError);
+                                                    
+            }
+        });
+
     }
 }), $(".validation-wizard").validate({
     ignore: "input[type=hidden]"
