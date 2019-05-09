@@ -472,7 +472,7 @@
                                         </div>
                                         <section id="section_anggota"></section>
                                         <button type="button" id="btn_add" class="btn btn-success">Tambah Anggota</button>
-                                        <button type="submit" id="btn_add" class="btn btn-success">Submit</button>
+                                        <!--<button type="submit" id="btn_add" class="btn btn-success">Submit</button>-->
                                     </section>
                                 </form>
                             </div>
