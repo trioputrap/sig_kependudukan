@@ -53,6 +53,7 @@ class KartuKeluargaController extends Controller
                 "nik_ibu" => $request->nik_ibu[$key],
                 "jenis_kelamin" => $request->jenis_kelamin[$key],
                 "tempat_lahir" => $request->tempat_lahir[$key],
+                "tanggal_lahir" => $request->tanggal_lahir[$key],
                 "agama" => $request->agama[$key],
                 "pekerjaan" => $request->pekerjaan[$key],
                 "pendidikan" => $request->pendidikan[$key],
@@ -92,9 +93,11 @@ class KartuKeluargaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(KartuKeluarga $kk)
     {
-        //
+        $data['provinsis'] = Daerah::where('level', 1)->get();
+        $data['kk'] = $kk;
+        return view('templates.material.edit-kk', $data);
     }
 
     /**
@@ -118,6 +121,7 @@ class KartuKeluargaController extends Controller
                 "nik_ibu" => $request->nik_ibu[$key],
                 "jenis_kelamin" => $request->jenis_kelamin[$key],
                 "tempat_lahir" => $request->tempat_lahir[$key],
+                "tanggal_lahir" => $request->tanggal_lahir[$key],
                 "agama" => $request->agama[$key],
                 "pekerjaan" => $request->pekerjaan[$key],
                 "pendidikan" => $request->pendidikan[$key],

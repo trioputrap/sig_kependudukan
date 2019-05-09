@@ -23,6 +23,11 @@ class KartuKeluarga extends Model
         'valid'
     ];
 
+    public function anggota()
+    {
+        return $this->belongsToMany('App\Penduduk', 'anggota_kk');
+    }
+
     public function kepala_keluarga()
     {
         return $this->hasOne('App\AnggotaKK', 'kartu_keluarga_id', 'id')->where('kepala_keluarga', 1);
