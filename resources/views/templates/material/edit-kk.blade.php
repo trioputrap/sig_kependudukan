@@ -558,7 +558,7 @@
                                                             <option value="Belum/Tidak Bekerja" {{($anggota->pekerjaan=="hindu")?'selected':''}}>Belum/Tidak Bekerja</option>
                                                             <option value="Pelajar/Mahasiswa" {{($anggota->pekerjaan=="Pelajar/Mahasiswa")?'selected':''}}>Pelajar/Mahasiswa</option>
                                                             <option value="Pensiunan" {{($anggota->pekerjaan=="Pensiunan")?'selected':''}}>Pensiunan</option>
-                                                            <option value="Pegawai Negeri Sipil" {{($nggota->pekerjaan=="Pegawai Negeri Sipil")?'selected':''}}>Pegawai Negeri Sipil</option>
+                                                            <option value="Pegawai Negeri Sipil" {{($anggota->pekerjaan=="Pegawai Negeri Sipil")?'selected':''}}>Pegawai Negeri Sipil</option>
                                                             <option value="Tentara Nasional Indonesia" {{($anggota->pekerjaan=="Tentara Nasional Indonesia")?'selected':''}}>Tentara Nasional Indonesia</option>
                                                             <option value="Kepolisian RI" {{($anggota->pekerjaan=="Kepolisian RI")?'selected':''}}>Kepolisian RI</option>
                                                             <option value="Perdagangan" {{($anggota->pekerjaan=="Perdagangan")?'selected':''}}>Perdagangan</option>
