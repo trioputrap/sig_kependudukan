@@ -203,16 +203,12 @@
                         <li>
                             <a class="has-arrow waves-effect waves-dark" href="index2s.html" aria-expanded="false"><i class="mdi mdi-note-multiple-outline"></i><span class="hide-menu">Kartu Keluarga</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="#">Lihat Kartu Keluarga</a></li>
+                                <li><a href="/kk">Lihat Kartu Keluarga</a></li>
                                 <li><a href="/kk/create">Tambah Kartu Keluarga</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-account-multiple-outline"></i><span class="hide-menu">Penduduk</span></a>
-                            <ul aria-expanded="false" class="collapse">
-                                <li><a href="#">Lihat Penduduk</a></li>
-                                <li><a href="tambah-instansi.html">Tambah Penduduk</a></li>
-                            </ul>
+                            <a class="waves-effect waves-dark" href="/penduduk" aria-expanded="false"><i class="mdi mdi-account-multiple-outline"></i><span class="hide-menu">Penduduk</span></a>
                         </li>
                         
                     </ul>

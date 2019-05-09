@@ -17,7 +17,8 @@ class KartuKeluargaController extends Controller
      */
     public function index()
     {
-        
+        $kk = KartuKeluarga::all();
+        return view('templates.material.kk-view', compact('kk', $kk));
     }
 
     /**

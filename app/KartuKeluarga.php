@@ -23,28 +23,28 @@ class KartuKeluarga extends Model
         'valid'
     ];
 
-    public function anggota()
+    public function kepala_keluarga()
     {
-        return $this->hasMany('App\Penduduk');
+        return $this->hasOne('App\AnggotaKK', 'kartu_keluarga_id', 'id')->where('kepala_keluarga', 1);
     }
 
     public function desa()
     {
-        return $this->belongsTo('App\Desa');
+        return $this->belongsTo('App\Daerah', 'desa_id', 'id');
     }
 
     public function kecamatan()
     {
-        return $this->belongsTo('App\Kecamatan');
+        return $this->belongsTo('App\Daerah', 'kecamatan_id', 'id');
     }
 
     public function kabupaten()
     {
-        return $this->belongsTo('App\Kabupaten');
+        return $this->belongsTo('App\Daerah', 'kabupaten_id', 'id');
     }
     
     public function provinsi()
     {
-        return $this->belongsTo('App\Provinsi');
+        return $this->belongsTo('App\Daerah', 'provinsi_id', 'id');
     }
 }

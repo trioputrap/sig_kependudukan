@@ -10,22 +10,16 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-    <title>Material Pro Admin Template - The Most Complete & Trusted Bootstrap 4 Admin Template</title>
+    <title>Material Pro Admin Template - The Most Complete & Trusted Bootstrap 4 Admin ../../template</title>
     <!-- Bootstrap Core CSS -->
-    <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- chartist CSS -->
-    <link href="../assets/plugins/chartist-js/dist/chartist.min.css" rel="stylesheet">
-    <link href="../assets/plugins/chartist-js/dist/chartist-init.css" rel="stylesheet">
-    <link href="../assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
-    <link href="../assets/plugins/css-chart/css-chart.css" rel="stylesheet">
-    <!--This page css - Morris CSS -->
-    <link href="../assets/plugins/c3-master/c3.min.css" rel="stylesheet">
-    <!-- Vector CSS -->
-    <link href="../assets/plugins/vectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+    <link href="/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/plugins/wizard/steps.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="template/css/style.css" rel="stylesheet">
+    <link href="/template/css/style.css" rel="stylesheet">
     <!-- You can change the theme colors from here -->
-    <link href="template/css/colors/blue.css" id="theme" rel="stylesheet">
+    <link href="/template/css/colors/blue.css" id="theme" rel="stylesheet">
+    <!--alerts CSS -->
+    <link href="/assets/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -34,7 +28,7 @@
 <![endif]-->
 </head>
 
-<body class="fix-header fix-sidebar card-no-border">
+<body class="fix-header card-no-border">
     <!-- ============================================================== -->
     <!-- Preloader - style you can find in spinners.css -->
     <!-- ============================================================== -->
@@ -55,6 +49,7 @@
                 <!-- Logo -->
                 <!-- ============================================================== -->
                 <div class="navbar-header">
+                        
                     <a style="color: #FFF" class="navbar-brand" href="index.html">
                         <b>SIGPENDUK</b>
                     </a>
@@ -193,7 +188,9 @@
         <aside class="left-sidebar">
             <!-- Sidebar scroll-->
             <div class="scroll-sidebar">
+                <!-- User profile -->
                 
+                <!-- End User profile text-->
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
@@ -204,7 +201,7 @@
                             <a class="waves-effect waves-dark" href="index2s.html" aria-expanded="false"><i class="mdi mdi-account-multiple-outline"></i><span class="hide-menu">User</span></a>
                         </li>
                         <li>
-                            <a class="has-arrow waves-effect waves-dark" href="index2s.html" aria-expanded="false"><i class="mdi mdi-note-multiple-outline"></i><span class="hide-menu">Kartu Keluarga</span></a>
+                            <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="mdi mdi-note-multiple-outline"></i><span class="hide-menu">Kartu Keluarga</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="/kk">Lihat Kartu Keluarga</a></li>
                                 <li><a href="/kk/create">Tambah Kartu Keluarga</a></li>
@@ -246,12 +243,13 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 col-8 align-self-center">
-                        <h3 class="text-themecolor">Dashboard</h3>
+                        <h3 class="text-themecolor m-b-0 m-t-0">Kartu Keluarga</h3>
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                            <li class="breadcrumb-item active">Dashboard</li>
+                            <li class="breadcrumb-item active">Lihat Kartu Keluarga</li>
                         </ol>
                     </div>
+                   
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Bread crumb and right sidebar toggle -->
@@ -259,178 +257,40 @@
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
-                <div class="row">
-                    <!-- Column -->
-                    <div class="col-lg-4 col-md-4">
+                <!-- vertical wizard -->
+                <div id="validation" class="row">
+                    <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <div class="d-flex flex-row">
-                                    <div class="round round-lg align-self-center round-info"><i class="mdi mdi-account-multiple-outline"></i></div>
-                                    <div class="m-l-10 align-self-center">
-                                        <h3 class="m-b-0 font-light">23</h3>
-                                        <h5 class="text-muted m-b-0">User</h5></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Column -->
-                    <!-- Column -->
-                    <div class="col-lg-4 col-md-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex flex-row">
-                                    <div class="round round-lg align-self-center round-warning"><i class="mdi mdi-note-multiple-outline"></i></div>
-                                    <div class="m-l-10 align-self-center">
-                                        <h3 class="m-b-0 font-lgiht">2132</h3>
-                                        <h5 class="text-muted m-b-0">Kartu Keluarga</h5></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Column -->
-                    <!-- Column -->
-                    <div class="col-lg-4 col-md-4">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex flex-row">
-                                    <div class="round round-lg align-self-center round-primary"><i class="mdi mdi-account-multiple-outline"></i></div>
-                                    <div class="m-l-10 align-self-center">
-                                        <h3 class="m-b-0 font-lgiht">152142</h3>
-                                        <h5 class="text-muted m-b-0">Penduduk</h5></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Column 
-                    <div class="col-lg-3 col-md-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex flex-row">
-                                    <div class="round round-lg align-self-center round-danger"><i class="mdi mdi-note-multiple-outline"></i></div>
-                                    <div class="m-l-10 align-self-center">
-                                        <h3 class="m-b-0 font-lgiht">5687</h3>
-                                        <h5 class="text-muted m-b-0">Publikasi Invalid</h5></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    -->
-                    <!-- Column -->
-                </div>
-
-                <div class="row">
-                    <!-- Column -->
-                    <div class="col-lg-12 col-md-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Data KK Provinsi</h4>
-                                <h6 class="card-subtitle">Kartu Keluarga & Penduduk</h6>
-                                <div class="amp-pxl" style="height: 300px;"></div>
-                                <div class="text-center">
-                                    <ul class="list-inline">
-                                        <li>
-                                            <h6 class="text-muted  text-info"><i class="fa fa-circle font-10 m-r-10"></i>Penduduk</h6> </li>
-                                        <li>
-                                            <h6 class="text-muted text-success"><i class="fa fa-circle font-10 m-r-10 "></i>KK</h6> </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Row -->
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="card">
-                            <div class="card-body">
-                                <select class="custom-select pull-right">
-                                    <option selected="">Sitasi</option>
-                                    <option value="1">Publikasi</option>
-                                </select>
-                                <h4 class="card-title">User</h4>
                                 <div class="table-responsive m-t-20">
-                                    <table class="table stylish-table">
+                                    <table id="myTable" class="table stylish-table">
                                         <thead>
                                             <tr>
-                                                <th colspan="2">Profil</th>
-                                                <th>Name</th>
-                                                <th>Priority</th>
-                                                <th>Sitasi</th>
+                                                <th>#</th>
+                                                <th>No KK</th>
+                                                <th>Alamat</th>
+                                                <th>Kepala Keluarga</th>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach($kk as $key => $val)
                                             <tr>
-                                                <td style="width:50px;"><span class="round">S</span></td>
-                                                <td>
-                                                    <h6>Sunil Joshi</h6><small class="text-muted">Web Designer</small></td>
-                                                <td>Elite Admin</td>
-                                                <td><span class="label label-success">Low</span></td>
-                                                <td>423</td>
+                                                <td>{{$key++}}</td>
+                                                <td>{{$val->no_kk}}</td>
+                                                <td>{{$val->alamat}}</td>
+                                                <td>{{$val->kepala_keluarga->penduduk->nama}}</td>
                                             </tr>
-                                            <tr>
-                                                <td><span class="round"><img src="../assets/images/users/2.jpg" alt="user" width="50"></span></td>
-                                                <td>
-                                                    <h6>Andrew</h6><small class="text-muted">Project Manager</small></td>
-                                                <td>Real Homes</td>
-                                                <td><span class="label label-info">Medium</span></td>
-                                                <td>311</td>
-                                            </tr>
-                                            <tr>
-                                                <td><span class="round round-success">B</span></td>
-                                                <td>
-                                                    <h6>Bhavesh patel</h6><small class="text-muted">Developer</small></td>
-                                                <td>MedicalPro Theme</td>
-                                                <td><span class="label label-primary">High</span></td>
-                                                <td>298</td>
-                                            </tr>
-                                            <tr>
-                                                <td><span class="round round-primary">N</span></td>
-                                                <td>
-                                                    <h6>Nirav Joshi</h6><small class="text-muted">Frontend Eng</small></td>
-                                                <td>Elite Admin</td>
-                                                <td><span class="label label-danger">Low</span></td>
-                                                <td>265</td>
-                                            </tr>
-                                            <tr>
-                                                <td><span class="round round-warning">M</span></td>
-                                                <td>
-                                                    <h6>Micheal Doe</h6><small class="text-muted">Content Writer</small></td>
-                                                <td>Helping Hands</td>
-                                                <td><span class="label label-warning">High</span></td>
-                                                <td>244</td>
-                                            </tr>
+                                            @endforeach
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <h3 class="card-title">Total Publikasi</h3>
-                                <h6 class="card-subtitle">Perbandingan Publikasi Valid & Invalid</h6>
-                                <div id="visitor" style="height:260px; width:100%;"></div>
-                            </div>
-                            <div>
-                                <hr class="m-t-0 m-b-0">
-                            </div>
-                            <div class="card-body text-center ">
-                                <ul class="list-inline m-b-0">
-                                    <li>
-                                        <h6 class="text-muted text-info"><i class="fa fa-circle font-10 m-r-10 "></i>Valid</h6> </li>
-                                    <li>
-                                        <h6 class="text-muted  text-primary"><i class="fa fa-circle font-10 m-r-10"></i>Invalid</h6> </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <!-- Row -->
 
-                
-                
+
+                <!-- Row -->
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->
@@ -438,59 +298,7 @@
                 <!-- Right sidebar -->
                 <!-- ============================================================== -->
                 <!-- .right-sidebar -->
-                <div class="right-sidebar">
-                    <div class="slimscrollright">
-                        <div class="rpanel-title"> Service Panel <span><i class="ti-close right-side-toggle"></i></span> </div>
-                        <div class="r-panel-body">
-                            <ul id="themecolors" class="m-t-20">
-                                <li><b>With Light sidebar</b></li>
-                                <li><a href="javascript:void(0)" data-theme="default" class="default-theme">1</a></li>
-                                <li><a href="javascript:void(0)" data-theme="green" class="green-theme">2</a></li>
-                                <li><a href="javascript:void(0)" data-theme="red" class="red-theme">3</a></li>
-                                <li><a href="javascript:void(0)" data-theme="blue" class="blue-theme working">4</a></li>
-                                <li><a href="javascript:void(0)" data-theme="purple" class="purple-theme">5</a></li>
-                                <li><a href="javascript:void(0)" data-theme="megna" class="megna-theme">6</a></li>
-                                <li class="d-block m-t-30"><b>With Dark sidebar</b></li>
-                                <li><a href="javascript:void(0)" data-theme="default-dark" class="default-dark-theme">7</a></li>
-                                <li><a href="javascript:void(0)" data-theme="green-dark" class="green-dark-theme">8</a></li>
-                                <li><a href="javascript:void(0)" data-theme="red-dark" class="red-dark-theme">9</a></li>
-                                <li><a href="javascript:void(0)" data-theme="blue-dark" class="blue-dark-theme">10</a></li>
-                                <li><a href="javascript:void(0)" data-theme="purple-dark" class="purple-dark-theme">11</a></li>
-                                <li><a href="javascript:void(0)" data-theme="megna-dark" class="megna-dark-theme ">12</a></li>
-                            </ul>
-                            <ul class="m-t-20 chatonline">
-                                <li><b>Chat option</b></li>
-                                <li>
-                                    <a href="javascript:void(0)"><img src="../assets/images/users/1.jpg" alt="user-img" class="img-circle"> <span>Varun Dhavan <small class="text-success">online</small></span></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)"><img src="../assets/images/users/2.jpg" alt="user-img" class="img-circle"> <span>Genelia Deshmukh <small class="text-warning">Away</small></span></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)"><img src="../assets/images/users/3.jpg" alt="user-img" class="img-circle"> <span>Ritesh Deshmukh <small class="text-danger">Busy</small></span></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)"><img src="../assets/images/users/4.jpg" alt="user-img" class="img-circle"> <span>Arijit Sinh <small class="text-muted">Offline</small></span></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)"><img src="../assets/images/users/5.jpg" alt="user-img" class="img-circle"> <span>Govinda Star <small class="text-success">online</small></span></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)"><img src="../assets/images/users/6.jpg" alt="user-img" class="img-circle"> <span>John Abraham<small class="text-success">online</small></span></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)"><img src="../assets/images/users/7.jpg" alt="user-img" class="img-circle"> <span>Hritik Roshan<small class="text-success">online</small></span></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)"><img src="../assets/images/users/8.jpg" alt="user-img" class="img-circle"> <span>Pwandeep rajan <small class="text-success">online</small></span></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- ============================================================== -->
-                <!-- End Right sidebar -->
-                <!-- ============================================================== -->
+                
             </div>
             <!-- ============================================================== -->
             <!-- End Container fluid  -->
@@ -515,70 +323,36 @@
     <!-- ============================================================== -->
     <!-- All Jquery -->
     <!-- ============================================================== -->
-    <script src="../assets/plugins/jquery/jquery.min.js"></script>
+    <script src="/assets/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
-    <script src="../assets/plugins/bootstrap/js/popper.min.js"></script>
-    <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/plugins/bootstrap/js/popper.min.js"></script>
+    <script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <!-- slimscrollbar scrollbar JavaScript -->
-    <script src="template/js/jquery.slimscroll.js"></script>
+    <script src="/template/js/jquery.slimscroll.js"></script>
     <!--Wave Effects -->
-    <script src="template/js/waves.js"></script>
+    <script src="/template/js/waves.js"></script>
     <!--Menu sidebar -->
-    <script src="template/js/sidebarmenu.js"></script>
+    <script src="/template/js/sidebarmenu.js"></script>
     <!--stickey kit -->
-    <script src="../assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
-    <script src="../assets/plugins/sparkline/jquery.sparkline.min.js"></script>
-    <!--stickey kit -->
-    <script src="../assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
-    <script src="../assets/plugins/sparkline/jquery.sparkline.min.js"></script>
-    <script src="../assets/plugins/sparkline/jquery.sparkline.min.js"></script>
+    <script src="/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
+    <script src="/assets/plugins/sparkline/jquery.sparkline.min.js"></script>
     <!--Custom JavaScript -->
-    <script src="template/js/custom.min.js"></script>
-    <!-- ============================================================== -->
-    <!-- This page plugins -->
-    <!-- ============================================================== -->
-    <!-- chartist chart -->
-    <script src="../assets/plugins/chartist-js/dist/chartist.min.js"></script>
-    <script src="../assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>
-    <!--c3 JavaScript -->
-    <script src="../assets/plugins/d3/d3.min.js"></script>
-    <script src="../assets/plugins/c3-master/c3.min.js"></script>
-    <!-- Vector map JavaScript -->
-    <script src="../assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js"></script>
-    <script src="../assets/plugins/vectormap/jquery-jvectormap-us-aea-en.js"></script>
-    <script src="template/js/dashboard2.js"></script>
+    <script src="/template/js/custom.min.js"></script>
+    <script src="/assets/plugins/moment/min/moment.min.js"></script>
     <!-- ============================================================== -->
     <!-- Style switcher -->
     <!-- ============================================================== -->
-    <script src="../assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+    <script src="/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
+    <!-- Sweet-Alert  -->
+    <script src="/assets/plugins/sweetalert/sweetalert.min.js"></script>
+    <script src="/assets/plugins/sweetalert/jquery.sweet-alert.custom.js"></script>
+    <!-- This is data table -->
+    <script src="/assets/plugins/datatables/jquery.dataTables.min.js"></script>
     <script>
-        $(function () {
-            "use strict";
-            // ============================================================== 
-            // Sales overview
-            // ============================================================== 
-            var chart2 = new Chartist.Bar('.amp-pxl', {
-                labels: ['Bali', 'NTB', 'Jawa Timur', 'Jawa Tengah', 'Jawa Barat', 'Sumatra Selatan'],
-                series: [
-                    [12234, 8042, 11234, 7812, 9213, 10012],
-                    [4763, 2214, 5213, 2324, 4232, 6214]
-                ]
-                }, {
-                axisX: {
-                    // On the x-axis start means top and end means bottom
-                    position: 'end',
-                    showGrid: false
-                },
-                axisY: {
-                    // On the y-axis start means left and end means right
-                    position: 'start'
-                },
-                low: '0',
-                plugins: [
-                    Chartist.plugins.tooltip()
-                ]
-            });
-        });
+       
+    $(document).ready(function() {
+        $('#myTable').DataTable();
+    });
     </script>
 </body>
 

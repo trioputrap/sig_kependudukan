@@ -17,4 +17,9 @@ class AnggotaKK extends Model
         'status',
         'kepala_keluarga'
     ];
+
+    public function penduduk()
+    {
+        return $this->hasOne('App\Penduduk', 'id', 'penduduk_id');
+    }
 }
