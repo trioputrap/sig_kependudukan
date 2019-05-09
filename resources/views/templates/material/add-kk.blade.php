@@ -589,6 +589,7 @@
     <script src="/assets/plugins/styleswitcher/jQuery.style.switcher.js"></script>
     <script>
         function ajax_daerah(daerah, id, select_element, master){
+            alert('TEST');
             $.ajax({
                 url: "https://sigpenduk.herokuapp.com/api/"+ id +"/"+ daerah,
                 type: "GET",
