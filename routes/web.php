@@ -14,8 +14,8 @@
 Route::get('/', function () {
     return view('templates.material.index');
 });
-Route::get('/kk', 'KartuKeluargaController@index');
-Route::get('/kk/create', 'KartuKeluargaController@create');
+Route::get('/kk', 'KartuKeluargaController@index')->name('kk.index');
+Route::get('/kk/create', 'KartuKeluargaController@create')->name('kk.create');
 Route::post('/kk/store', 'KartuKeluargaController@store')->name('kk.store');
 Route::get('/kk/edit/{kk}', 'KartuKeluargaController@edit')->name('kk.edit');
-Route::get('/penduduk', 'PendudukController@index');
+Route::get('/penduduk', 'PendudukController@index')->name('penduduk.index');
