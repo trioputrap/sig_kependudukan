@@ -32,7 +32,7 @@ $(".validation-wizard").steps({
         var id = $("#id").val();
         var url = "https://sigpenduk.herokuapp.com/api/kk/store";
         if (id != "") {
-            url = "https://sigpenduk.herokuapp.com/api/kk/update/"+id;
+            url = "http://sigpenduk.herokuapp.com/api/kk/update/"+id;
         }
         var formData = new FormData($("#form_kk")[0]);
         $.ajax({
