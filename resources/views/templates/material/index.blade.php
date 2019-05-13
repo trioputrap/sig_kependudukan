@@ -80,6 +80,14 @@ Tambah Kartu Keluarga
     <!-- Column -->
 </div>
 
+<div class="row">
+    <!-- Column -->
+    <div class="col-lg-12 col-md-12">
+        <div class="card">
+                <div id="map" style="height: 500px"></div>
+        </div>
+    </div>
+</div>
 <!-- Row -->
 <div class="row">
     <div class="col-lg-8">
@@ -121,14 +129,6 @@ Tambah Kartu Keluarga
     </div>
 </div>
 
-<div class="row">
-    <!-- Column -->
-    <div class="col-lg-12 col-md-12">
-        <div class="card">
-                <div id="map" style="height: 500px"></div>
-        </div>
-    </div>
-</div>
 <!-- Row -->
 @endsection
 @section('js') 
@@ -136,7 +136,7 @@ Tambah Kartu Keluarga
     <script src="https://leaflet.github.io/Leaflet.markercluster/dist/leaflet.markercluster-src.js"></script>
     <script>
         $(function () {
-            var map = L.map('map').setView([-8.395636, 115.175905],8);
+            var map = L.map('map').setView([-2.7235830833483856, 118.47242945961344],5);
             var mapPopup = L.popup();
 			var markers = L.markerClusterGroup();
             var data_kk = {!! $kk !!}
