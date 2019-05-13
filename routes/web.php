@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('templates.material.index');
-});
+Route::get('/', 'DashboardController@index')->name('index');
 Route::get('/kk', 'KartuKeluargaController@index')->name('kk.index');
 Route::get('/kk/create', 'KartuKeluargaController@create')->name('kk.create');
 Route::post('/kk/store', 'KartuKeluargaController@store')->name('kk.store');
