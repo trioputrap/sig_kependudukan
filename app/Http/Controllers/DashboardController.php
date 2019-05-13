@@ -10,6 +10,6 @@ class DashboardController extends Controller
     public function index()
     {
         $data['kk'] = KartuKeluarga::all()->toJson();
-        return view('templates.material.index', $data;
+        return view('templates.material.index', $data);
     }
 }
