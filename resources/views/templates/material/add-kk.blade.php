@@ -105,13 +105,13 @@ Tambah Kartu Keluarga
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="lat">Latitude :</label>
-                                    <input id="lat" name="lat" type="text" class="form-control required" disabled> 
+                                    <input id="lat" name="lat" type="number" class="form-control required" readonly="readonly" > 
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="lon">Longitude :</label>
-                                    <input id="lon" name="lon" type="text" class="form-control required" disabled> 
+                                    <input id="lon" name="lon" type="number" class="form-control required" readonly="readonly" > 
                                 </div>
                             </div>
                         </div>
@@ -277,7 +277,7 @@ Tambah Kartu Keluarga
         function ajax_daerah(daerah, id, select_element, master){
             $(select_element).html('<option value="">-SEDANG MEMUAT DATA '+daerah.toUpperCase()+'-</option>');
             $.ajax({
-                url: "https://sigpenduk.herokuapp.com/api/"+ id +"/"+ daerah,
+                url: "http://sigpenduk.herokuapp.com/api/"+ id +"/"+ daerah,
                 type: "GET",
                 crossDomain: true,
                 dataType: "json",                

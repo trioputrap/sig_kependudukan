@@ -146,8 +146,23 @@ Tambah Kartu Keluarga
             
             data_kk.forEach(function(data){
                 var marker = L.marker([data.lat, data.lon]);
+                marker.bindPopup(popup(data))
                 markers.addLayer(marker);
             });	
+
+            function popup(data){
+                return `
+                    <h6 class='card-subtitle'>No Kartu Keluarga : </h6>
+                    <h5>`+ data.no_kk +`</h5>
+                    <h6 class='card-subtitle'>Kepala Keluarga : </h6>
+                    <h5>`+ data.nama +`</h5>
+                    <h6 class='card-subtitle'>Alamat : </h6>
+                    <h5>`+ data.alamat +`</h5>
+                    <h6 class='card-subtitle'>Jumlah Anggota : </h6>
+                    <h5>`+ data.jml_anggota +`</h5>
+                    <a href="#" class='btn btn-primary'>Detail Kartu Keluarga</a>
+                `;
+            }
 
     		map.addLayer(markers);	
             // ============================================================== 
