@@ -169,10 +169,10 @@ Tambah Kartu Keluarga
             // Sales overview
             // ============================================================== 
             var chart2 = new Chartist.Bar('.amp-pxl', {
-                labels: ['Bali', 'NTB', 'Jawa Timur', 'Jawa Tengah', 'Jawa Barat', 'Sumatra Selatan'],
+                labels: [{!! $bar_chart['prov'] !!}],
                 series: [
-                    [12234, 8042, 11234, 7812, 9213, 10012],
-                    [4763, 2214, 5213, 2324, 4232, 6214]
+                    [{!! $bar_chart['jml_penduduk'] !!}],
+                    [{!! $bar_chart['jml_kk'] !!}]
                 ]
                 }, {
                 axisX: {

@@ -30,9 +30,9 @@ $(".validation-wizard").steps({
     }
     , onFinished: function (event, currentIndex) {
         var id = $("#id").val();
-        var url = "http://localhost:8000/api/kk/store";
+        var url = "http://sigpenduk.herokuapp.com/api/kk/store";
         if (id != "") {
-            url = "http://localhost:8000/api/kk/update/"+id;
+            url = "http://sigpenduk.herokuapp.com/api/kk/update/"+id;
         }
         var formData = new FormData($("#form_kk")[0]);
         $.ajax({
@@ -51,7 +51,7 @@ $(".validation-wizard").steps({
                 $(".id_anggota").each(function(index){
                     $(this).val(response[1][index].id)
                 });
-                window.location.href = "http://localhost:8000/kk";
+                window.location.href = "http://sigpenduk.herokuapp.com/kk";
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 console.log(xhr.status);
