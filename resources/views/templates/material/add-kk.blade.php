@@ -265,11 +265,21 @@ Tambah Kartu Keluarga
             attribution:'<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>',
         }).addTo(map);
         
+        
+        var iconOpt = L.Icon.extend({
+            options: {
+                iconSize:     [50, 50], // size of the icon
+                iconAnchor:   [25, 50],
+                popupAnchor:  [0, -50]
+            }
+        });
+        var homeIcon = new iconOpt({iconUrl: '/assets/images/marker.png'});
+
         map.on('click',function(e){
             if(marker!=null){
                 map.removeLayer(marker);
             }
-            marker = L.marker([e.latlng.lat, e.latlng.lng]).addTo(map);
+            marker = L.marker([e.latlng.lat, e.latlng.lng], {icon: homeIcon}).addTo(map);
             $("#lat").val(e.latlng.lat)
             $("#lon").val(e.latlng.lng)
         });
@@ -277,7 +287,7 @@ Tambah Kartu Keluarga
         function ajax_daerah(daerah, id, select_element, master){
             $(select_element).html('<option value="">-SEDANG MEMUAT DATA '+daerah.toUpperCase()+'-</option>');
             $.ajax({
-                url: "http://sigpenduk.herokuapp.com/api/"+ id +"/"+ daerah,
+                url: "http://localhost:8000/api/"+ id +"/"+ daerah,
                 type: "GET",
                 crossDomain: true,
                 dataType: "json",                

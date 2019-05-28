@@ -29,7 +29,7 @@ Tambah Kartu Keluarga
                 <div class="d-flex flex-row">
                     <div class="round round-lg align-self-center round-info"><i class="mdi mdi-account-multiple-outline"></i></div>
                     <div class="m-l-10 align-self-center">
-                        <h3 class="m-b-0 font-light">23</h3>
+                        <h3 class="m-b-0 font-light">2</h3>
                         <h5 class="text-muted m-b-0">User</h5></div>
                 </div>
             </div>
@@ -43,7 +43,7 @@ Tambah Kartu Keluarga
                 <div class="d-flex flex-row">
                     <div class="round round-lg align-self-center round-warning"><i class="mdi mdi-note-multiple-outline"></i></div>
                     <div class="m-l-10 align-self-center">
-                        <h3 class="m-b-0 font-lgiht">2132</h3>
+                        <h3 class="m-b-0 font-lgiht">{{count($kk)}}</h3>
                         <h5 class="text-muted m-b-0">Kartu Keluarga</h5></div>
                 </div>
             </div>
@@ -57,7 +57,7 @@ Tambah Kartu Keluarga
                 <div class="d-flex flex-row">
                     <div class="round round-lg align-self-center round-primary"><i class="mdi mdi-account-multiple-outline"></i></div>
                     <div class="m-l-10 align-self-center">
-                        <h3 class="m-b-0 font-lgiht">152142</h3>
+                        <h3 class="m-b-0 font-lgiht">{{count($penduduk)}}</h3>
                         <h5 class="text-muted m-b-0">Penduduk</h5></div>
                 </div>
             </div>
@@ -110,8 +110,8 @@ Tambah Kartu Keluarga
     <div class="col-lg-4 col-md-12">
         <div class="card">
             <div class="card-body">
-                <h3 class="card-title">Total Publikasi</h3>
-                <h6 class="card-subtitle">Perbandingan Publikasi Valid & Invalid</h6>
+                <h3 class="card-title">Statistik Penduduk</h3>
+                <h6 class="card-subtitle">Perbandingan Jumlah Kartu Keluarga & Penduduk</h6>
                 <div id="visitor" style="height:260px; width:100%;"></div>
             </div>
             <div>
@@ -120,9 +120,9 @@ Tambah Kartu Keluarga
             <div class="card-body text-center ">
                 <ul class="list-inline m-b-0">
                     <li>
-                        <h6 class="text-muted text-info"><i class="fa fa-circle font-10 m-r-10 "></i>Valid</h6> </li>
+                        <h6 class="text-muted text-info"><i class="fa fa-circle font-10 m-r-10 "></i>Penduduk</h6> </li>
                     <li>
-                        <h6 class="text-muted  text-primary"><i class="fa fa-circle font-10 m-r-10"></i>Invalid</h6> </li>
+                        <h6 class="text-muted  text-warning"><i class="fa fa-circle font-10 m-r-10"></i>Kartu Keluarga</h6> </li>
                 </ul>
             </div>
         </div>
@@ -143,9 +143,19 @@ Tambah Kartu Keluarga
             L.tileLayer('https://maps.tilehosting.com/styles/streets/{z}/{x}/{y}.png?key=YrAn6SOXelkLFXHv03o2',{
                 attribution:'<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>',
             }).addTo(map);
+
+            
+            var iconOpt = L.Icon.extend({
+                options: {
+                    iconSize:     [50, 50], // size of the icon
+                    iconAnchor:   [25, 50],
+                    popupAnchor:  [0, -50]
+                }
+            });
+            var homeIcon = new iconOpt({iconUrl: '/assets/images/marker.png'});
             
             data_kk.forEach(function(data){
-                var marker = L.marker([data.lat, data.lon]);
+                var marker = L.marker([data.lat, data.lon], {icon: homeIcon});
                 marker.bindPopup(popup(data))
                 markers.addLayer(marker);
             });	
@@ -188,6 +198,35 @@ Tambah Kartu Keluarga
                 plugins: [
                     Chartist.plugins.tooltip()
                 ]
+            });
+
+            var chart = c3.generate({
+                bindto: '#visitor',
+                data: {
+                    columns: [
+                        ['Penduduk', {{count($penduduk)}}],
+                        ['Kartu Keluarga', {{count($kk)}}],
+                    ],
+                    
+                    type : 'donut',
+                },
+                donut: {
+                    label: {
+                        show: false
+                    },
+                    title: "KK & Penduduk",
+                    width:20,
+                    
+                },
+                
+                legend: {
+                hide: true
+                //or hide: 'data1'
+                //or hide: ['data1', 'data2']
+                },
+                color: {
+                    pattern: ['#745af2', '#ffb22b']
+                }
             });
         });
     </script>

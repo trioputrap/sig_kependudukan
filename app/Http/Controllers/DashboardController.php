@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\KartuKeluarga;
+use App\Penduduk;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -36,6 +37,9 @@ class DashboardController extends Controller
             $jml_penduduk[] = $val->jml_penduduk;
             $jml_kk[] = $val->jml_kk;
         }
+
+        $data['kk'] = KartuKeluarga::all();
+        $data['penduduk'] = Penduduk::all();
 
         $data['bar_chart']['prov'] = '"' . implode('","', $provs) . '"';
         $data['bar_chart']['jml_penduduk'] = implode(',', $jml_penduduk);

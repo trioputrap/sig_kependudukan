@@ -386,9 +386,19 @@ Edit Kartu Keluarga
 <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
 <script>
     
-        var map = L.map('map').setView([-8.395636, 115.175905],10);
+        var map = L.map('map').setView([{{$kk->lat}}, {{$kk->lon}}],10);
         var mapPopup = L.popup();
-        var marker = L.marker([{{$kk->lat}}, {{$kk->lon}}]).addTo(map);
+        
+        var iconOpt = L.Icon.extend({
+            options: {
+                iconSize:     [50, 50], // size of the icon
+                iconAnchor:   [25, 50],
+                popupAnchor:  [0, -50]
+            }
+        });
+        var homeIcon = new iconOpt({iconUrl: '/assets/images/marker.png'});
+
+        var marker = L.marker([{{$kk->lat}}, {{$kk->lon}}], {icon: homeIcon}).addTo(map);
         
         L.tileLayer('https://maps.tilehosting.com/styles/streets/{z}/{x}/{y}.png?key=YrAn6SOXelkLFXHv03o2',{
             attribution:'<a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a>',
@@ -398,14 +408,14 @@ Edit Kartu Keluarga
             if(marker!=null){
                 map.removeLayer(marker);
             }
-            marker = L.marker([e.latlng.lat, e.latlng.lng]).addTo(map);
+            marker = L.marker([e.latlng.lat, e.latlng.lng], {icon: homeIcon}).addTo(map);
             $("#lat").val(e.latlng.lat)
             $("#lon").val(e.latlng.lng)
         });
 
         function ajax_daerah(daerah, id, select_element, master){
             $.ajax({
-                url: "http://sigpenduk.herokuapp.com/api/"+ id +"/"+ daerah,
+                url: "http://localhost:8000/api/"+ id +"/"+ daerah,
                 type: "GET",
                 crossDomain: true,
                 dataType: "json",                
